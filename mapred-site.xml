@@ -1,0 +1,6 @@
+<configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn-tez</value>
+    </property>
+</configuration>
