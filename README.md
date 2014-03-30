@@ -16,7 +16,7 @@ Hadoop 2.3 and Apache Tez 0.3.0-incubating
 When running one of the stock map-reduce examples, the TEZ DAG ApplicationMaster will run the map-reduce job instead of the YARN MR AppMaster.
 This can be verified by looking at the YARN ResourceManager UI.
 ```
-$HADOOP_PREFIX/bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.3.0.jar grep input output 'dfs[a-z.]+'
+$HADOOP_PREFIX/bin/hadoop jar $HADOOP_PREFIX/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.3.0.jar grep input output 'dfs[a-z.]+'
 ```
 
 There is also a basic Tez MRR job example in one of the tez jars. You can test it by running the following:
