@@ -8,7 +8,7 @@ RUN $BOOTSTRAP && $HADOOP_PREFIX/bin/hadoop dfsadmin -safemode leave && $HADOOP_
 ADD tez-site.xml $HADOOP_PREFIX/etc/hadoop/tez-site.xml
 ADD mapred-site.xml $HADOOP_PREFIX/etc/hadoop/mapred-site.xml
 
-RUN echo 'TEZ_JARS=/usr/local/tez/*' >> hadoop-env.sh
-RUN echo 'TEZ_LIB=/usr/local/tez/lib/*' >> hadoop-env.sh
-RUN echo 'TEZ_CONF=/usr/local/hadoop/etc/hadoop' >> hadoop-env.sh
+RUN echo 'TEZ_JARS=/usr/local/tez/*' >> $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
+RUN echo 'TEZ_LIB=/usr/local/tez/lib/*' >> $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
+RUN echo 'TEZ_CONF=/usr/local/hadoop/etc/hadoop' >> $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
 RUN echo 'export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$TEZ_CONF:$TEZ_JARS:$TEZ_LIB' >> $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
