@@ -21,5 +21,5 @@ $HADOOP_PREFIX/bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2
 
 There is also a basic Tez MRR job example in one of the tez jars. You can test it by running the following:
 ```
-$HADOOP_PREFIX/bin/hadoop jar /usr/local/tez/tez-mapreduce-examples-0.3.0-incubating.jar  orderedwordcount input output
+$HADOOP_PREFIX/bin/hadoop jar /usr/local/tez/tez-mapreduce-examples-0.3.0-incubating.jar  orderedwordcount input output-owc
 ```
