@@ -6,7 +6,7 @@ The base Hadoop docker image is also available as an official Docker image (sequ
 
 ## Running the image
 ```
-docker run -i -t -P sequenceiq/tez-docker /etc/bootstrap.sh -bash
+docker run -i -t -P sequenceiq/tez /etc/bootstrap.sh -bash
 ```
 
 ## Versions
