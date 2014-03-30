@@ -1,0 +1,6 @@
+<configuration>
+  <property>
+    <name>tez.lib.uris</name>
+    <value>${fs.default.name}/tez,${fs.default.name}/tez/lib</value>
+  </property>
+</configuration>
