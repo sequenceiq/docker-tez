@@ -2,7 +2,7 @@ FROM sequenceiq/hadoop-docker:2.4.0
 MAINTAINER SequenceIQ
 
 RUN curl -s https://s3-eu-west-1.amazonaws.com/seq-tez/tez-0.5.0-incubating-SNAPSHOT.tar.gz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s tez-0.5.0-incubating tez
+RUN cd /usr/local && ln -s tez-0.5.0-incubating-SNAPSHOT tez
 RUN $BOOTSTRAP && $HADOOP_PREFIX/bin/hadoop dfsadmin -safemode leave && $HADOOP_PREFIX/bin/hdfs dfs -put /usr/local/tez-0.5.0-incubating-SNAPSHOT /tez
 
 ADD tez-site.xml $HADOOP_PREFIX/etc/hadoop/tez-site.xml
