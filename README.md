@@ -4,13 +4,18 @@ Apache Tez on Docker
 This repository contains a docker file to build a docker image with Apache Tez. This docker image depends on our previous Hadoop docker image, available at the SequenceIQ GitHub page.
 The base Hadoop docker image is also available as an official Docker image (sequenceiq/hadoop-docker).
 
+## Building the image
+```
+docker build  -t sequenceiq/tez .
+```
+
 ## Running the image
 ```
 docker run -i -t -P sequenceiq/tez /etc/bootstrap.sh -bash
 ```
 
 ## Versions
-Hadoop 2.3 and Apache Tez 0.3.0-incubating
+Hadoop 2.4 and Apache Tez 0.5.0-incubating
 
 ## Testing
 When running one of the stock map-reduce examples, the TEZ DAG ApplicationMaster will run the map-reduce job instead of the YARN MR AppMaster.
