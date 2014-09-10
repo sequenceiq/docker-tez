@@ -4,7 +4,15 @@ Apache Tez on Docker
 This repository contains a docker file to build a docker image with Apache Tez. This docker image depends on our previous Hadoop docker image, available at the SequenceIQ GitHub page.
 The base Hadoop docker image is also available as an official Docker image (sequenceiq/hadoop-docker).
 
+## Pull the image
+
+```
+docker pull sequenceiq/tez:v0.5onHadoop2.5
+```
+
 ## Building the image
+
+Alternatively you can build it from the Dockerfile.
 ```
 docker build  -t sequenceiq/tez .
 ```
